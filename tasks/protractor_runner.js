@@ -10,6 +10,7 @@
 
 var util = require('util');
 var path = require('path');
+var _ = require('lodash');
 
 module.exports = function(grunt) {
 
@@ -30,6 +31,9 @@ module.exports = function(grunt) {
       debug: false,
       args: {}
     });
+
+    // Merge options onto data, with data taking precedence.
+    opts.args = _.merge(opts.args, this.data);
 
     // configFile is a special property which need not to be in options{} object.
     if (!grunt.util._.isUndefined(this.data.configFile)) {

@@ -28,7 +28,8 @@
     "test": "grunt test"
   },
   "dependencies": {
-    "protractor": ">=0.14.0-0 <1.0.0"
+    "protractor": ">=0.14.0-0 <1.0.0",
+    "lodash": "~2.4.1"
   },
   "devDependencies": {
     "grunt-contrib-jshint": "~0.6.0",
